@@ -1,4 +1,5 @@
 from UI.signature import show_signature
+from UI.colors import RED, BLUE, RESET
 
 def main():
     show_signature()
@@ -12,7 +13,7 @@ def main():
      choice = (input('Choose an option: ')).strip()
     
      if choice == '1':
-        print('Back to main menu: type "back"')
+        print(f'{BLUE}Back to main menu: type "back" {RESET}')
         while True:
              link_youtube = input('Please paste your YouTube link: ').strip()
              #sistema para verificar se o link funciona e é aceito pelo yt-dlp.
@@ -49,14 +50,14 @@ def main():
              elif audio == '3':
                  break
              else:
-                 print('Invalid option, please try again!')
+                 print(f'{RED}Invalid option, please try again!{RESET}')
 
      elif choice == '4':
          print('Closing program...')
          #sistema para fechar o programa!
          break
      else:
-         print('Invalid option, please try again!')
+         print(f'{RED}Invalid option, please try again!{RESET}')
     
 if __name__ == '__main__':
     main()
