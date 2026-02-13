@@ -5,8 +5,8 @@ def main():
     show_signature()
     
     while True:
-     print(f'{GREEN}1 - Download youtube video?{RESET}')
-     print(f'{GREEN}2 - Cut video!{RESET}')
+     print(f'{GREEN}1 - Download youtube video or audio?{RESET}')
+     print(f'{GREEN}2 - Cut video?{RESET}')
      print(f'{GREEN}3 - Convert video to audio or download audio from youtube?{RESET}')
      print(f'{RED}4 - Close program!{RESET}')
 
@@ -15,7 +15,7 @@ def main():
      links_adds = []
     
      while True:
-        quantity_string = input('How many videos do you want to download?: ').strip()
+        quantity_string = input('How many links do you want to process?: ').strip()
         if quantity_string == '':
             print(f'{RED}Invalid quantity, please try again!{RESET}')
             continue
@@ -30,14 +30,12 @@ def main():
         for i in range(quantity):
             print(f'{BLUE}Back to main menu: type "back" {RESET}')
             link_youtube = input(f'Please paste your YouTube link {i+1}: ').strip()
-            #sistema para verificar se o link funciona e é aceito pelo yt-dlp.
-            links_adds.append(link_youtube)
             if link_youtube.lower() == ('back'):
                  break
-            print(f'{YELLOW}Verifying link...{RESET}')
-             #sistema para seleção de qualidade de video e audio disponiveis!
-             #sistema para escolha de formato de video e audio disponiveis!
-        
+            #sistema para verificar se o link funciona e é aceito pelo yt-dlp.
+            links_adds.append(link_youtube)
+            #sistema para perguntar se o usuário quer baixar o video ou o audio!
+            #sistema para seleção de qualidade de video e audio disponiveis!        
 
      elif choice == '2':
         while True:
@@ -50,20 +48,13 @@ def main():
         while True:
              print(f'{GREEN}1 - Convert video to audio!{RESET}')
              #sistema para converter video para audio usando o ffmpeg!
-             print(f'{GREEN}2 - Download audio from youtube!{RESET}')
-             #sistema para baixar audio do youtube usando o yt-dlp!
-             print(f'{BLUE}3 - Back to main menu!{RESET}')
+             print(f'{BLUE}2 - Back to main menu!{RESET}')
              audio = input('Choose an option: ').strip()
              if audio == '1':
                  #sistema para abrir pasta do video!
                  #sistema para chamar o ffmpeg!
                  pass
              elif audio == '2':
-                 link_youtube = input('Please paste your YouTube link: ').strip()
-                 print(f'{YELLOW}Verifying link...{RESET}')
-                 #sistema para verificar se o link funciona e é aceito pelo yt-dlp.
-                 #sistema para baixar audio do youtube usando o yt-dlp!
-             elif audio == '3':
                  break
              else:
                  print(f'{RED}Invalid option, please try again!{RESET}')
