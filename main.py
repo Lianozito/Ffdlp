@@ -37,6 +37,7 @@ def main():
             #sistema para seleção de qualidade de video e audio disponiveis!       
 
      elif choice == '2':
+        print(f'{GREEN}Select an video to cut!{RESET}')
         while True:
          #sistema para abrir pasta do video!
          #sistema para chamar o ffmpeg!
