@@ -1,5 +1,5 @@
 from UI.signature import show_signature
-from UI.colors import RED, BLUE, RESET, GREEN, YELLOW
+from UI.colors import RED, BLUE, RESET, GREEN #YELLOW será usado para mensagens de verificação de links e qualidade disponivel!
 
 def main():
     show_signature()
@@ -7,7 +7,7 @@ def main():
     while True:
      print(f'{GREEN}1 - Download youtube video or audio?{RESET}')
      print(f'{GREEN}2 - Cut video?{RESET}')
-     print(f'{GREEN}3 - Convert video to audio or download audio from youtube?{RESET}')
+     print(f'{GREEN}3 - Convert video to audio?{RESET}')
      print(f'{RED}4 - Close program!{RESET}')
 
      choice = (input('Choose an option: ')).strip()
